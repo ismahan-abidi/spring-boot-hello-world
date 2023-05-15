@@ -11,6 +11,7 @@ COPY pom.xml /home/app
 #RUN nocmd
 
 RUN mkdir -p /var/local/SP
+RUN apt install mvn
 
 RUN mvn -f /home/app/pom.xml clean package
 
