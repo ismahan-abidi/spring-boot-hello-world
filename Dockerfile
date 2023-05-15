@@ -11,8 +11,8 @@ COPY pom.xml /home/app
 #RUN nocmd
 
 RUN mkdir -p /var/local/SP
-RUN  apt update
-RUN apt install maven
+RUN  apt update -y
+RUN apt install maven -y
 
 RUN mvn -f /home/app/pom.xml clean package
 
